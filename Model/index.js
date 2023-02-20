@@ -1,6 +1,8 @@
 const {Sequelize, DataTypes} = require("sequelize");
 
-const sequelize = new Sequelize('postgres://postgres:1863@localhost:5432/notifications');
+const sequelize = new Sequelize('postgres://postgres:1863@localhost:5432/notifications',{
+    logging:false
+});
 
 //check connection
 sequelize.authenticate().then(()=>{
